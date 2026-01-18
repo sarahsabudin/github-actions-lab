@@ -1,1 +1,19 @@
+name: Workflow vs Job vs Step Lab
 
+on: push
+
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Print message
+        run: echo "This is Step 1 in Job One"
+
+      - name: Step 2 - Print another message
+        run: echo "This is Step 2 in Job One"
+
+  job-two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Print message
+        run: echo "This is Step 1 in Job Two"
