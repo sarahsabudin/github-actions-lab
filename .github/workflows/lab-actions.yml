@@ -13,7 +13,8 @@ jobs:
         run: echo "This is Step 2 in Job One"
 
   job-two:
+    needs: job-one
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Print message
-        run: echo "This is Step 1 in Job Two"
+    - name: Step 1 - Print message
+      run: echo "Job Two runs after Job One"
